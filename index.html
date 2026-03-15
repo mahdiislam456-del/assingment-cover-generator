@@ -1,67 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment Cover Page Generator</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Assignment Cover Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
+
 <body>
 
-  <div class="cover">
+<h1>Assignment Cover Page Generator Created by Mahdi Islam Chowdhury(CSE-60)</h1>
 
-    <img src="smu_logo.png" alt="Logo" class="logo">
+<div class="form-box">
 
-    <p class="credit">Created by Mahadi Islam Chowdhury, CSE60</p>
-
-    <div class="form-box">
-      <label for="name">Name:</label>
-      <input type="text" id="name" placeholder="Enter your name">
+    <!-- Course Title -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="courseTitle" placeholder="Course Title">
+        <img src="icon-right.png" class="input-icon-right">
     </div>
 
-    <div class="form-box">
-      <label for="csa">CSA60:</label>
-      <input type="text" id="csa" placeholder="Enter CSA60">
+    <!-- Course Code -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="courseCode" placeholder="Course Code">
+        <img src="icon-right.png" class="input-icon-right">
     </div>
 
-    <div class="form-box">
-      <label for="date">Date:</label>
-      <input type="date" id="date">
+    <!-- Assignment No -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="assignmentNo" placeholder="Assignment No">
+        <img src="icon-right.png" class="input-icon-right">
     </div>
 
-    <div class="form-box">
-      <label for="faye">Faye:</label>
-      <input type="text" id="faye" placeholder="Enter Faye">
+    <!-- Assignment Title -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="assignmentTitle" placeholder="Assignment Title">
+        <img src="icon-right.png" class="input-icon-right">
     </div>
 
-    <div class="form-box">
-      <button id="generate">Generate Cover</button>
-      <button id="download">Download PDF</button>
+    <!-- Teacher Name -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="teacherName" placeholder="Teacher Name">
+        <img src="icon-right.png" class="input-icon-right">
     </div>
 
-  </div>
+    <!-- Designation -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="designation" placeholder="Designation">
+        <img src="icon-right.png" class="input-icon-right">
+    </div>
 
-  <script src="script.js"></script>
-  <script>
-    window.onload = function() {
-      document.getElementById("date").valueAsDate = new Date();
-    };
+    <!-- Student Name -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="studentName" placeholder="Student Name">
+        <img src="icon-right.png" class="input-icon-right">
+    </div>
 
-    document.getElementById("generate").addEventListener("click", function() {
-      let name = document.getElementById("name").value;
-      let csa = document.getElementById("csa").value;
-      let date = document.getElementById("date").value;
-      let faye = document.getElementById("faye").value;
+    <!-- Student ID -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="studentId" placeholder="Student ID">
+        <img src="icon-right.png" class="input-icon-right">
+    </div>
 
-      console.log("Name:", name);
-      console.log("CSA60:", csa);
-      console.log("Date:", date);
-      console.log("Faye:", faye);
+    <!-- Batch -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="batch" placeholder="Batch">
+        <img src="icon-right.png" class="input-icon-right">
+    </div>
 
-      // Add your logic to generate the cover page here
-    });
-  </script>
+    <!-- Section -->
+    <div class="input-box">
+        <img src="icon-left.png" class="input-icon-left">
+        <input type="text" id="section" placeholder="Section">
+        <img src="icon-right.png" class="input-icon-right">
+    </div>
 
+    <button onclick="generateCover()">Generate Cover</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+
+</div>
+
+<hr>
+
+<!-- COVER PREVIEW -->
+<div id="coverPage" class="cover">
+
+    <img src="smu_logo.png" class="logo">
+
+    <!-- Default preview content -->
+    <div id="content">
+        <p style="color:#000; font-weight:bold;">Course Title</p>
+        <p style="color:#000; font-weight:bold;">Course Code</p>
+        <p style="color:#000; font-weight:bold;">Assignment No</p>
+        <p style="color:#000; font-weight:bold;">Assignment Title</p>
+
+        <h3>Submitted To</h3>
+        <p>Teacher Name</p>
+        <p>Designation</p>
+
+        <h3>Submitted By</h3>
+        <p>Student Name</p>
+        <p>ID</p>
+        <p>Batch</p>
+        <p>Section</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
