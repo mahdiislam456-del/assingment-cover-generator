@@ -13,6 +13,8 @@ let studentName=document.getElementById("studentName").value;
 let studentId=document.getElementById("studentId").value;
 let batch=document.getElementById("batch").value;
 let section=document.getElementById("section").value;
+let date=document.getElementById("date").value;
+
 
 document.getElementById("content").innerHTML=`
 
@@ -34,6 +36,8 @@ document.getElementById("content").innerHTML=`
 <p>ID: ${studentId}</p>
 <p>Batch: ${batch}</p>
 <p>Section: ${section}</p>
+<p><b>Date:</b> ${date}</p>
+
 
 `;
 }
