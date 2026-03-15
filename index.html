@@ -1,119 +1,53 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
-    <title>Assignment Cover Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<title>Assignment Cover Generator</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- PDF library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 </head>
 
 <body>
 
-<h1>Assignment Cover Page Generator Created by Mahdi Islam Chowdhury(CSE-60)</h1>
+<h2>Assignment Cover Page Generator Created by Mahdi Islam Chowdhury (CSE-60)</h2>
 
 <div class="form-box">
 
-    <!-- Course Title -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="courseTitle" placeholder="Course Title">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
+<input type="text" id="courseTitle" placeholder="Course Title">
+<input type="text" id="courseCode" placeholder="Course Code">
+<input type="text" id="assignmentNo" placeholder="Assignment No">
+<input type="text" id="assignmentTitle" placeholder="Assignment Title">
 
-    <!-- Course Code -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="courseCode" placeholder="Course Code">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
+<input type="text" id="teacherName" placeholder="Teacher Name">
+<input type="text" id="designation" placeholder="Designation">
 
-    <!-- Assignment No -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="assignmentNo" placeholder="Assignment No">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
+<input type="text" id="studentName" placeholder="Student Name">
+<input type="text" id="studentId" placeholder="Student ID">
+<input type="text" id="batch" placeholder="Batch">
+<input type="text" id="section" placeholder="Section">
+<input type="text" id="date" placeholder="Date">
 
-    <!-- Assignment Title -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="assignmentTitle" placeholder="Assignment Title">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
-
-    <!-- Teacher Name -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="teacherName" placeholder="Teacher Name">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
-
-    <!-- Designation -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="designation" placeholder="Designation">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
-
-    <!-- Student Name -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="studentName" placeholder="Student Name">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
-
-    <!-- Student ID -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="studentId" placeholder="Student ID">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
-
-    <!-- Batch -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="batch" placeholder="Batch">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
-
-    <!-- Section -->
-    <div class="input-box">
-        <img src="icon-left.png" class="input-icon-left">
-        <input type="text" id="section" placeholder="Section">
-        <img src="icon-right.png" class="input-icon-right">
-    </div>
-
-    <button onclick="generateCover()">Generate Cover</button>
-    <button onclick="downloadPDF()">Download PDF</button>
+<button onclick="generateCover()">Generate Cover</button>
+<button onclick="downloadPDF()">Download PDF</button>
 
 </div>
 
 <hr>
 
-<!-- COVER PREVIEW -->
 <div id="coverPage" class="cover">
 
-    <img src="smu_logo.png" class="logo">
+<img src="smu_logo.png" class="logo">
 
-    <!-- Default preview content -->
-    <div id="content">
-        <p style="color:#000; font-weight:bold;">Course Title</p>
-        <p style="color:#000; font-weight:bold;">Course Code</p>
-        <p style="color:#000; font-weight:bold;">Assignment No</p>
-        <p style="color:#000; font-weight:bold;">Assignment Title</p>
+<h2>Metropolitan University</h2>
+<p>Computer Science and Engineering</p>
 
-        <h3>Submitted To</h3>
-        <p>Teacher Name</p>
-        <p>Designation</p>
-
-        <h3>Submitted By</h3>
-        <p>Student Name</p>
-        <p>ID</p>
-        <p>Batch</p>
-        <p>Section</p>
-    </div>
+<div id="content"></div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
