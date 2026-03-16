@@ -1,9 +1,10 @@
 function generateCover(){
 
-    let courseTitle=document.getElementById("courseTitle").value;
-    let courseCode=document.getElementById("courseCode").value;
+    l
     let assignmentNo=document.getElementById("assignmentNo").value;
     let assignmentTitle=document.getElementById("assignmentTitle").value;
+    let courseTitle=document.getElementById("courseTitle").value;
+    let courseCode=document.getElementById("courseCode").value;
 
     let teacherName=document.getElementById("teacherName").value;
     let designation=document.getElementById("designation").value;
@@ -15,10 +16,13 @@ function generateCover(){
     let date=document.getElementById("date").value;
 
     document.getElementById("content").innerHTML=`
-        <p><b>Course Title:</b> ${courseTitle}</p>
-        <p><b>Course Code:</b> ${courseCode}</p>
         <p><b>Assignment No:</b> ${assignmentNo}</p>
         <p><b>Assignment Title:</b> ${assignmentTitle}</p>
+        <p><b>Course Title:</b> ${courseTitle}</p>
+        <p><b>Course Code:</b> ${courseCode}</p>
+        
+        
+        
 
         <h3><u>Submitted To</u></h3>
         <p>${teacherName}</p>
