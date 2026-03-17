@@ -24,15 +24,30 @@ color: white;
 
 }
 
-.cover{
-width:600px;
-margin:40pxauto; 
-background:white;
-padding:40px; 
-border:1px solid #ccc;
-
+.cover{                                      
+    width:794px;              /* Full A4 width */
+    min-height:1123px;        /* Full A4 height */
+    margin:40px auto;         /* FIXED (you had typo here) */
+    background:white;
+    padding:60px 80px;        /* Proper spacing */
+    border:1px solid #ccc;
+    box-sizing:border-box;
 }
+    
+
 .logo{
 width:280px;
 margin-bottom:10px;
+}
+
+#content{
+    margin-top:20px;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* Headings like "Submitted To" */
+#content h3{
+    margin-top:40px;
+    margin-bottom:10px;
 }
